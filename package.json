@@ -32,7 +32,8 @@
     "dev": "tsdown --watch"
   },
   "devDependencies": {
-    "tsdown": "latest"
+    "tsdown": "latest",
+    "vitest": "4.1.4"
   },
   "peerDependencies": {
     "postcss": "^8.0.0"
