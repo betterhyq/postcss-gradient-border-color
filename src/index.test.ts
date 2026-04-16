@@ -3,7 +3,9 @@ import postcss from 'postcss'
 import plugin from './index'
 
 function run(input: string, opts: Parameters<typeof plugin>[0] = {}) {
-  return postcss([plugin(opts)]).process(input, { from: undefined }).then(r => r.css)
+  return postcss([plugin(opts)])
+    .process(input, { from: undefined })
+    .then((r) => r.css)
 }
 
 // ============================================================
@@ -29,15 +31,21 @@ describe('postcss-gradient-border-color', () => {
       // Should generate ::before pseudo-element
       expect(output).toContain('.box::before')
       // Pseudo should have gradient as background
-      expect(output).toContain('background: linear-gradient(to right, red, blue)')
+      expect(output).toContain(
+        'background: linear-gradient(to right, red, blue)',
+      )
       // Pseudo should have correct padding matching border-width
       expect(output).toContain('padding: 2px')
       expect(output).toContain('margin: -2px')
       // Should include mask properties
-      expect(output).toContain('mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0) border-box')
+      expect(output).toContain(
+        'mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0) border-box',
+      )
       expect(output).toContain('mask-composite: exclude')
       // Should include webkit prefix
-      expect(output).toContain('-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0) border-box')
+      expect(output).toContain(
+        '-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0) border-box',
+      )
       expect(output).toContain('-webkit-mask-composite: xor')
     })
   })
@@ -84,7 +92,9 @@ describe('postcss-gradient-border-color', () => {
       const output = await run(input)
 
       expect(output).toContain('border-color: transparent')
-      expect(output).toContain('background: conic-gradient(red, yellow, green, blue, red)')
+      expect(output).toContain(
+        'background: conic-gradient(red, yellow, green, blue, red)',
+      )
     })
 
     it('should support repeating-linear-gradient', async () => {
@@ -95,7 +105,9 @@ describe('postcss-gradient-border-color', () => {
       const output = await run(input)
 
       expect(output).toContain('border-color: transparent')
-      expect(output).toContain('background: repeating-linear-gradient(45deg, red 0px, blue 10px)')
+      expect(output).toContain(
+        'background: repeating-linear-gradient(45deg, red 0px, blue 10px)',
+      )
     })
 
     it('should support repeating-radial-gradient', async () => {
@@ -106,7 +118,9 @@ describe('postcss-gradient-border-color', () => {
       const output = await run(input)
 
       expect(output).toContain('border-color: transparent')
-      expect(output).toContain('background: repeating-radial-gradient(circle, red 0px, blue 10px)')
+      expect(output).toContain(
+        'background: repeating-radial-gradient(circle, red 0px, blue 10px)',
+      )
     })
 
     it('should support repeating-conic-gradient', async () => {
@@ -117,7 +131,9 @@ describe('postcss-gradient-border-color', () => {
       const output = await run(input)
 
       expect(output).toContain('border-color: transparent')
-      expect(output).toContain('background: repeating-conic-gradient(red 0deg, blue 30deg)')
+      expect(output).toContain(
+        'background: repeating-conic-gradient(red 0deg, blue 30deg)',
+      )
     })
   })
 
@@ -195,7 +211,7 @@ describe('postcss-gradient-border-color', () => {
       // Should keep existing position: absolute
       expect(output).toContain('position: absolute')
       // Should NOT add another position: relative
-      const matches = output.match(/position:/g)
+      // Verify position declarations exist
       // One in the original rule (absolute) + one in ::before (absolute from pseudo)
       // The original rule should not have position: relative appended
       expect(output).not.toMatch(/position: absolute[\s\S]*position: relative/)
@@ -335,7 +351,9 @@ describe('postcss-gradient-border-color', () => {
       const output = await run(input)
 
       expect(output).toContain('border-color: transparent')
-      expect(output).toContain('background: Linear-Gradient(to right, red, blue)')
+      expect(output).toContain(
+        'background: Linear-Gradient(to right, red, blue)',
+      )
     })
   })
 })

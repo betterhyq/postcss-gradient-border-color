@@ -113,9 +113,7 @@ const plugin: PluginCreator<GradientBorderColorOptions> = (
       }
 
       // ---- Create ::before pseudo-element rule ----
-      const selector = rule.selectors
-        .map((s) => `${s}::before`)
-        .join(', ')
+      const selector = rule.selectors.map((s) => `${s}::before`).join(', ')
 
       const pseudoCss = `${selector} {
   content: "";
