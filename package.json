@@ -1,17 +1,30 @@
 {
-  "name": "tsdown-starter",
-  "version": "0.0.0",
-  "private": true,
-  "description": "A simple example library built by tsdown",
+  "name": "postcss-gradient-border-color",
+  "version": "0.1.0",
+  "private": false,
+  "description": "A PostCSS plugin that enables gradient colors for border-color using CSS background-like syntax",
+  "keywords": [
+    "postcss",
+    "postcss-plugin",
+    "gradient",
+    "border",
+    "border-color",
+    "linear-gradient",
+    "css"
+  ],
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.js",
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
     "./package.json": "./package.json"
   },
   "scripts": {
@@ -20,5 +33,8 @@
   },
   "devDependencies": {
     "tsdown": "latest"
+  },
+  "peerDependencies": {
+    "postcss": "^8.0.0"
   }
 }
