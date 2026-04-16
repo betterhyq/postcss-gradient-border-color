@@ -40,5 +40,6 @@
   },
   "peerDependencies": {
     "postcss": "^8.0.0"
-  }
+  },
+  "packageManager": "pnpm@10.33.0"
 }
