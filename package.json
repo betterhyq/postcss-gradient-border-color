@@ -1,6 +1,6 @@
 {
   "name": "postcss-gradient-border-color",
-  "version": "0.1.0",
+  "version": "0.0.1-alpha.0",
   "private": false,
   "description": "A PostCSS plugin that enables gradient colors for border-color using CSS background-like syntax",
   "keywords": [
