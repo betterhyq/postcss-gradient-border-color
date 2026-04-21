@@ -1,7 +1,9 @@
 import { defineConfig } from "tsdown";
 
 export default defineConfig({
-  attw: true,
+  attw: {
+    ignoreRules: ["false-export-default"],
+  },
   banner: "// Powered by YONGQI",
   deps: {
     neverBundle: ["postcss"],
