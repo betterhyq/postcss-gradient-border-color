@@ -33,7 +33,7 @@
     "dev": "tsdown --watch",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
-    "lint": "oxlint",
+    "lint": "oxlint --type-aware",
     "lint:fix": "oxlint --fix",
     "test": "vitest run",
     "test:e2e": "playwright test",
