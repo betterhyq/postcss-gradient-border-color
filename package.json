@@ -1,6 +1,6 @@
 {
   "name": "postcss-gradient-border-color",
-  "version": "0.0.1-alpha.2",
+  "version": "0.1.0",
   "private": false,
   "description": "A PostCSS plugin that enables gradient colors for border-color using CSS background-like syntax",
   "keywords": [
@@ -37,11 +37,13 @@
     "lint:fix": "oxlint --fix",
     "test": "vitest run",
     "test:e2e": "playwright test",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "release": "changelogen --release"
   },
   "devDependencies": {
     "@playwright/test": "1.59.1",
     "@types/node": "25.6.0",
+    "changelogen": "0.6.2",
     "oxfmt": "0.46.0",
     "oxlint": "1.61.0",
     "tsdown": "0.21.9",
