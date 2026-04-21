@@ -24,26 +24,26 @@ Add the plugin to your PostCSS config:
 ```js
 // postcss.config.js
 module.exports = {
-  plugins: [require('postcss-gradient-border-color')],
-}
+  plugins: [require("postcss-gradient-border-color")],
+};
 ```
 
 Or with ESM:
 
 ```js
 // postcss.config.js
-import gradientBorderColor from 'postcss-gradient-border-color'
+import gradientBorderColor from "postcss-gradient-border-color";
 
 export default {
   plugins: [gradientBorderColor],
-}
+};
 ```
 
 ### With Vite
 
 ```js
 // vite.config.js
-import gradientBorderColor from 'postcss-gradient-border-color'
+import gradientBorderColor from "postcss-gradient-border-color";
 
 export default {
   css: {
@@ -51,7 +51,7 @@ export default {
       plugins: [gradientBorderColor],
     },
   },
-}
+};
 ```
 
 ## How It Works
@@ -75,7 +75,7 @@ export default {
   position: relative;
 }
 .box::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   margin: -2px;
@@ -110,7 +110,7 @@ export default {
 | `preserve` | `boolean` | `false` | Whether to preserve the original `border-color` declaration. |
 
 ```js
-gradientBorderColor({ preserve: true })
+gradientBorderColor({ preserve: true });
 ```
 
 ## Important Notes

@@ -19,8 +19,8 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version-file: '.node-version'
-          cache: 'pnpm'
+          node-version-file: ".node-version"
+          cache: "pnpm"
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -34,8 +34,8 @@ jobs:
         with:
           publish: pnpm changeset publish
           version: pnpm changeset version
-          title: 'chore: version packages'
-          commit: 'chore: version packages'
+          title: "chore: version packages"
+          commit: "chore: version packages"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

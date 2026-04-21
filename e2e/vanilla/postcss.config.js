@@ -1,7 +1,5 @@
-import gradientBorderColor from 'postcss-gradient-border-color'
+import gradientBorderColor from "postcss-gradient-border-color";
 
 export default {
-  plugins: [
-    gradientBorderColor(),
-  ],
-}
+  plugins: [gradientBorderColor()],
+};

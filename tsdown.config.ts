@@ -1,13 +1,13 @@
-import { defineConfig } from 'tsdown'
+import { defineConfig } from "tsdown";
 
 export default defineConfig({
-  entry: ['./src/index.ts'],
-  format: ['esm', 'cjs'],
-  platform: 'neutral',
+  entry: ["./src/index.ts"],
+  format: ["esm", "cjs"],
+  platform: "neutral",
   dts: {
     oxc: true,
   },
   deps: {
-    neverBundle: ['postcss'],
+    neverBundle: ["postcss"],
   },
-})
+});

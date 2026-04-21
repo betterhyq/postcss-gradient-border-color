@@ -8,8 +8,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^6.3.2",
     "postcss": "^8.5.0",
-    "postcss-gradient-border-color": "link:../../"
+    "postcss-gradient-border-color": "link:../../",
+    "vite": "^6.3.2"
   }
 }

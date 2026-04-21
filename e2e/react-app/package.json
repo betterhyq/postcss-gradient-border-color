@@ -12,9 +12,9 @@
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "vite": "^6.3.2",
     "@vitejs/plugin-react": "^4.5.0",
     "postcss": "^8.5.0",
-    "postcss-gradient-border-color": "link:../../"
+    "postcss-gradient-border-color": "link:../../",
+    "vite": "^6.3.2"
   }
 }

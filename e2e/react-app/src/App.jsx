@@ -1,4 +1,4 @@
-import './App.css'
+import "./App.css";
 
 export default function App() {
   return (
@@ -8,5 +8,5 @@ export default function App() {
       <div className="box-conic" data-testid="box-conic" />
       <div className="box-plain" data-testid="box-plain" />
     </div>
-  )
+  );
 }
