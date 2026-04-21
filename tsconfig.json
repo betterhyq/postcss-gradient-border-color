@@ -1,18 +1,20 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "ESNext",
+    "target": "esnext",
+    "lib": ["es2023"],
+    "moduleDetection": "force",
+    "module": "preserve",
     "moduleResolution": "bundler",
-    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "types": ["node"],
     "strict": true,
-    "skipLibCheck": true,
+    "noUnusedLocals": true,
     "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
-    "outDir": "dist",
-    "rootDir": "src",
-    "types": ["vitest/globals"]
+    "emitDeclarationOnly": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist", "e2e"]
+  "include": ["src"]
 }
